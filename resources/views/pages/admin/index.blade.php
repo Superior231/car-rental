@@ -80,7 +80,7 @@
                             <thead>
                                 <tr>
                                     <th class="px-auto px-lg-2 text-center">No</th>
-                                    <th>Customer</th>
+                                    <th>Name</th>
                                     <th>Mobil</th>
                                     <th>Mulai</th>
                                     <th>Selesai</th>
