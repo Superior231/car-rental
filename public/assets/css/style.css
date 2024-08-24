@@ -421,7 +421,8 @@ header .image-text .header-text {
   color: var(--text-color-white);
 }
 
-#bookingOngoingTable_length select {
+#bookingOngoingTable_length select,
+#customerTable_length select {
   padding: 5px 20px 5px 15px;
 }
 /* Table End */
