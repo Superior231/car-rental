@@ -55,7 +55,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('admin.customer') }}" class="side-link {{ $active === 'customer' ? 'active' : '' }}" title="Customers">
+                        <a href="{{ route('customer.index') }}" class="side-link {{ $active === 'customer' ? 'active' : '' }}" title="Customers">
                             <i class='bx bxs-group icon'></i>
                             <span class="text nav-text">Customers</span>
                         </a>
@@ -110,7 +110,7 @@
                 <a href="dashboard-history.html" class="link-menu btn {{ $active === 'history' ? 'active' : '' }}">
                     <i class="bx bx-history"></i> History
                 </a>
-                <a href="{{ route('admin.customer') }}" class="link-menu btn {{ $active === 'customer' ? 'active' : '' }}">
+                <a href="{{ route('customer.index') }}" class="link-menu btn {{ $active === 'customer' ? 'active' : '' }}">
                     <i class='bx bxs-group'></i> Customers
                 </a>
 

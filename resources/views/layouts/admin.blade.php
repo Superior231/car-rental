@@ -9,6 +9,7 @@
 
 <body class="bg-soft-blue">
     @include('components.sidebar')
+    @include('components.toast')
     @yield('content')
     @include('components.scripts')
 </body>

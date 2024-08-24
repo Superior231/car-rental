@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GoogleLoginController;
 use App\Http\Controllers\HomeController;
@@ -22,6 +23,7 @@ Route::prefix('/')->middleware('auth')->group(function() {
 // Admin
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function() {
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
+    Route::resource('customer', CustomerController::class);
 });
 
 

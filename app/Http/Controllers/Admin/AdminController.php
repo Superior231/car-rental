@@ -13,7 +13,7 @@ class AdminController extends Controller
         $customerCount = User::all()->count();
 
         return view('pages.admin.index', [
-            'title' => 'Car Rental',
+            'title' => 'Dashboard',
             'active' => 'dashboard',
             'customerCount' => $customerCount
         ]);
