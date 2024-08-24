@@ -24,4 +24,17 @@ function showPass2() {
         document.getElementById("showPass2").innerHTML = '<i class="fa-regular fa-eye-slash"></i>';
     }
 }
+
+function showPass3() {
+    const passwordInput = document.getElementById("edit-password");
+    const passwordType = passwordInput.type;
+
+    if (passwordType === "password") {
+        passwordInput.type = "text";
+        document.getElementById("showPass3").innerHTML = '<i class="fa-regular fa-eye"></i>';
+    } else {
+        passwordInput.type = "password";
+        document.getElementById("showPass3").innerHTML = '<i class="fa-regular fa-eye-slash"></i>';
+    }
+}
 // Show Pass End
