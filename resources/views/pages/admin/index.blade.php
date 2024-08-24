@@ -80,11 +80,11 @@
                             <thead>
                                 <tr>
                                     <th class="px-auto px-lg-2 text-center">No</th>
-                                    <th>Name</th>
+                                    <th>Nama Lengkap</th>
                                     <th>Mobil</th>
                                     <th>Mulai</th>
                                     <th>Selesai</th>
-                                    <th>Status</th>
+                                    <th class="text-center">Status</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -118,7 +118,7 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="status-info">
+                                        <div class="status-info d-flex justify-content-center" style="width: 100%;">
                                             <span class="badge bg-primary fw-normal">On Going</span>
                                         </div>
                                     </td>
@@ -156,7 +156,7 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="status-info">
+                                        <div class="status-info d-flex justify-content-center" style="width: 100%;">
                                             <span class="badge bg-primary fw-normal">On Going</span>
                                         </div>
                                     </td>

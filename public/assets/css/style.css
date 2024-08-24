@@ -401,6 +401,7 @@ header .image-text .header-text {
   color: var(--text-color-dark);
   font-size: 14px;
   font-weight: 600;
+  text-wrap: nowrap;
 }
 .table tr td > * {
   width: max-content;

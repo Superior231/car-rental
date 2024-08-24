@@ -23,7 +23,7 @@
                             <thead>
                                 <tr>
                                     <th class="px-auto px-lg-2 text-center">No</th>
-                                    <th>Name</th>
+                                    <th>Nama Lengkap</th>
                                     <th>Email</th>
                                     <th>Phone</th>
                                     <th class="text-center">Actions</th>
@@ -64,7 +64,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <div class="actions d-flex justify-content-center align-items-center gap-2">
+                                            <div class="actions d-flex justify-content-center align-items-center gap-2 w-100">
                                                 <a href="#" onclick="editUser('{{ $item->id }}', '{{ $item->avatar }}', '{{ $item->avatar_google }}', '{{ $item->name }}', '{{ $item->email }}', '{{ $item->phone }}', '{{ $item->address }}')" data-bs-toggle="modal" data-bs-target="#edit-user-modal" title="Edit">
                                                     <i class='bx bxs-pencil bg-primary'></i>
                                                 </a>
