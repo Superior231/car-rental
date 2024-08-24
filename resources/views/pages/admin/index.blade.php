@@ -30,7 +30,7 @@
                 <div class="card h-100">
                     <div class="card-body d-flex align-items-center justify-content-between p-4">
                         <div class="d-flex gap-2">
-                            <i class="bx bxs-user fs-1 text-primary"></i>
+                            <i class='bx bxs-group fs-1 text-primary'></i>
                             <div class="card-info  d-flex flex-column">
                                 <h4 class="text-dark">{{ $customerCount }} Customer</h4>
                                 <p class="text-secondary fs-7">Jumlah Customer</p>
@@ -79,29 +79,27 @@
                     <table class="table table-striped table-hover" id="bookingOngoingTable" style="width:100%">
                         <thead>
                             <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Customer</th>
-                                <th scope="col">Mobil</th>
-                                <th scope="col">Mulai</th>
-                                <th scope="col">Selesai</th>
-                                <th scope="col">Status</th>
+                                <th class="px-auto px-lg-2 text-center">No</th>
+                                <th>Customer</th>
+                                <th>Mobil</th>
+                                <th>Mulai</th>
+                                <th>Selesai</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>
-                                    <div class="nomor">
+                                    <div class="nomor text-center">
                                         <span class="fw-normal">1</span>
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="username d-flex justify-content-start" style="width: max-content;">
-                                        <div class="username-info d-flex justify-content-center align-items-center gap-2">
-                                            <div class="profile-image">
-                                                <img class="img" src="https://ui-avatars.com/api/?background=random&name=AliSofiyan">
-                                            </div>
-                                            <span class="fw-normal">Ali Sofiyan</span>
+                                    <div class="username-info d-flex justify-content-center align-items-center gap-2" style="width: max-content;">
+                                        <div class="profile-image">
+                                            <img class="img" src="https://ui-avatars.com/api/?background=random&name=AliSofiyan">
                                         </div>
+                                        <span class="fw-normal">Ali Sofiyan</span>
                                     </div>
                                 </td>
                                 <td>
@@ -128,7 +126,7 @@
 
                             <tr>
                                 <td>
-                                    <div class="nomor">
+                                    <div class="nomor text-center">
                                         <span class="fw-normal">2</span>
                                     </div>
                                 </td>

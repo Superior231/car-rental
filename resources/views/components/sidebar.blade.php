@@ -56,7 +56,7 @@
                     </li>
                     <li>
                         <a href="#" class="side-link {{ $active === 'customer' ? 'active' : '' }}" title="Customer">
-                            <i class="bx bxs-user icon"></i>
+                            <i class='bx bxs-group icon'></i>
                             <span class="text nav-text">Customer</span>
                         </a>
                     </li>
@@ -115,7 +115,7 @@
                     <i class="bx bx-history"></i> History
                 </a>
                 <a href="dashboard-customers.html" class="link-menu btn {{ $active === 'customer' ? 'active' : '' }}">
-                    <i class="bx bxs-user"></i> Customer
+                    <i class='bx bxs-group'></i> Customer
                 </a>
 
                 <h5 class="mt-4 mb-2 text-dark fw-semibold">Other</h5>
