@@ -11,7 +11,7 @@
             <div class="title my-4">
                 <h2 class="text-dark fw-semibold">Selamat Datang Kembali, {{ Auth::user()->name }} 👋</h2>
             </div>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-2 g-md-3" id="row-dasboard">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-2 g-md-3" id="row-dashboard">
                 <a href="#" class="col">
                     <div class="card h-100">
                         <div class="card-body d-flex align-items-center justify-content-between p-4">
