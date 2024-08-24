@@ -32,7 +32,7 @@
                         <div class="d-flex gap-2">
                             <i class="bx bxs-user fs-1 text-primary"></i>
                             <div class="card-info  d-flex flex-column">
-                                <h4 class="text-dark">10 Customer</h4>
+                                <h4 class="text-dark">{{ $customerCount }} Customer</h4>
                                 <p class="text-secondary fs-7">Jumlah Customer</p>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
     <!-- Navbar -->
     <nav class="navbar d-block d-lg-none sticky-top">
-        <div class="container-fluid d-flex align-items-center px-4 py-2">
+        <div class="container-fluid d-flex align-items-center px-3 py-2">
             <a href="{{ route('admin.index') }}" class="logo fs-5">
                 <img src="{{ url('assets/images/logo.png') }}" alt="logo">
                 <span>Car Rental</span>
@@ -37,25 +37,25 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="side-link {{ $active === 'car list' ? 'active' : '' }}">
+                        <a href="#" class="side-link {{ $active === 'car list' ? 'active' : '' }}" title="Daftar Mobil">
                             <i class="bx bxs-car icon"></i>
                             <span class="text nav-text">Daftar Mobil</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="side-link {{ $active === 'booking' ? 'active' : '' }}">
+                        <a href="#" class="side-link {{ $active === 'booking' ? 'active' : '' }}" title="Booking">
                             <i class="bx bxs-calendar icon"></i>
                             <span class="text nav-text">Booking</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="side-link {{ $active === 'history' ? 'active' : '' }}">
+                        <a href="#" class="side-link {{ $active === 'history' ? 'active' : '' }}" title="History">
                             <i class="bx bx-history icon"></i>
                             <span class="text nav-text">History</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="side-link {{ $active === 'customer' ? 'active' : '' }}">
+                        <a href="#" class="side-link {{ $active === 'customer' ? 'active' : '' }}" title="Customer">
                             <i class="bx bxs-user icon"></i>
                             <span class="text nav-text">Customer</span>
                         </a>
@@ -72,7 +72,7 @@
                     </li>
                     <li>
                         <a id="logout-confirmaton" href="{{ route('logout') }}"
-                        onclick="event.preventDefault(); logout();">
+                        onclick="event.preventDefault(); logout();" title="Keluar">
                             <i class='bx bx-log-out icon'></i>
                             <span class="text nav-text">Keluar</span>
                         </a>
@@ -89,7 +89,12 @@
     <!-- Offcanvas -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="navMenu" aria-labelledby="navMenuLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="navMenuLabel">Menu</h5>
+            <a href="{{ route('admin.index') }}" class="image-text d-flex align-items-center gap-1 py-2">
+                <div class="logo fs-5">
+                    <img src="{{ url('assets/images/logo.png') }}" alt="logo">
+                </div>
+                <span class="text text-primary fw-bold"> &nbsp; Car Rental</span>
+            </a>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">

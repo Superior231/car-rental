@@ -305,6 +305,9 @@ header .image-text .header-text {
   .dashboard {
     width: 100% !important;
   }
+  .container-dashboard {
+    padding: 0px 15px !important;
+  }
 }
 /* Sidebar End */
 
