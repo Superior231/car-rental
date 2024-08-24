@@ -402,6 +402,12 @@ header .image-text .header-text {
   font-size: 14px;
   font-weight: 600;
 }
+.table tr td > * {
+  width: max-content;
+}
+.table tr td .nomor {
+  width: 100%;
+}
 .table .username-info .profile-image {
   width: 30px;
   height: 30px;
@@ -421,6 +427,7 @@ header .image-text .header-text {
   color: var(--text-color-white);
 }
 
+/* datatables */
 #bookingOngoingTable_length select,
 #customerTable_length select {
   padding: 5px 20px 5px 15px;

@@ -22,7 +22,7 @@
                         <table class="table table-striped table-hover" id="customerTable" style="width: 100%;">
                             <thead>
                                 <tr>
-                                    <th class="text-center">No</th>
+                                    <th class="px-auto px-lg-2 text-center">No</th>
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Phone</th>
