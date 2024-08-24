@@ -140,9 +140,9 @@
             Swal.fire({
                 icon: 'question',
                 title: 'Anda Yakin?',
-                text: 'Apakah Anda yakin ingin logout?',
+                text: 'Apakah Anda yakin ingin keluar?',
                 showCancelButton: true,
-                confirmButtonText: 'Logout',
+                confirmButtonText: 'Keluar',
                 customClass: {
                     popup: 'sw-popup',
                     title: 'sw-title',

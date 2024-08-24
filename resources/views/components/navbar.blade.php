@@ -42,7 +42,7 @@
                             <li>
                                 <a id="logout-confirmaton" class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault(); logout();">
-                                    {{ __('Logout') }}
+                                    Keluar
                                 </a>
     
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -95,9 +95,9 @@
             Swal.fire({
                 icon: 'question',
                 title: 'Anda Yakin?',
-                text: 'Apakah Anda yakin ingin logout?',
+                text: 'Apakah Anda yakin ingin keluar?',
                 showCancelButton: true,
-                confirmButtonText: 'Logout',
+                confirmButtonText: 'Keluar',
                 customClass: {
                     popup: 'sw-popup',
                     title: 'sw-title',
