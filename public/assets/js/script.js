@@ -1,25 +1,26 @@
 // Sidebar
-const body         = document.querySelector("body"),
-      sidebar      = body.querySelector(".sidebar"),
-      toggle       = body.querySelector(".toggle"),
-      rowDashboard = body.querySelector("#row-dasboard");
-
-
-// Menyimpan status sidebar di localStorage
-const sidebarState = localStorage.getItem("sidebar");
-
 try {
+    const body         = document.querySelector("body"),
+          sidebar      = body.querySelector(".sidebar"),
+          toggle       = body.querySelector(".toggle"),
+          rowDashboard = body.querySelector("#row-dashboard");
+
+    // Menyimpan status sidebar di localStorage
+    const sidebarState = localStorage.getItem("sidebar");
+
     if (sidebarState === "open") {
         sidebar.classList.remove("close");
-        rowDashboard.classList.remove('row-cols-lg-4');
-        rowDashboard.classList.add('row-cols-lg-2');
-
+        if (rowDashboard) {
+            rowDashboard.classList.remove('row-cols-lg-4');
+            rowDashboard.classList.add('row-cols-lg-2');
+        }
     } else {
         sidebar.classList.add("close");
-        rowDashboard.classList.remove('row-cols-lg-2');
-        rowDashboard.classList.add('row-cols-lg-4');
+        if (rowDashboard) {
+            rowDashboard.classList.remove('row-cols-lg-2');
+            rowDashboard.classList.add('row-cols-lg-4');
+        }
     }
-
 
     // Sidebar toggle
     toggle.addEventListener("click", () => {
@@ -27,12 +28,16 @@ try {
 
         // Update kolom berdasarkan status sidebar
         if (sidebar.classList.contains("close")) {
-            rowDashboard.classList.remove('row-cols-lg-2');
-            rowDashboard.classList.add('row-cols-lg-4');
+            if (rowDashboard) {
+                rowDashboard.classList.remove('row-cols-lg-2');
+                rowDashboard.classList.add('row-cols-lg-4');
+            }
             localStorage.setItem("sidebar", "closed");
         } else {
-            rowDashboard.classList.remove('row-cols-lg-4');
-            rowDashboard.classList.add('row-cols-lg-2');
+            if (rowDashboard) {
+                rowDashboard.classList.remove('row-cols-lg-4');
+                rowDashboard.classList.add('row-cols-lg-2');
+            }
             localStorage.setItem("sidebar", "open");
         }
     });
