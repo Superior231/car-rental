@@ -18,8 +18,8 @@
                 @csrf
 
                 <div class="mb-3">
-                    <label for="name" class="mb-1">Nama</label>
-                    <input type="text"  id="name" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="Masukkan nama" autocomplete="name" required autofocus>
+                    <label for="name" class="mb-1">Nama Lengkap</label>
+                    <input type="text"  id="name" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="Masukkan nama lengkap" autocomplete="name" required autofocus>
 
                     @error('name')
                         <span class="invalid-feedback" role="alert">
