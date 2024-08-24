@@ -55,9 +55,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="side-link {{ $active === 'customer' ? 'active' : '' }}" title="Customer">
+                        <a href="{{ route('admin.customer') }}" class="side-link {{ $active === 'customer' ? 'active' : '' }}" title="Customers">
                             <i class='bx bxs-group icon'></i>
-                            <span class="text nav-text">Customer</span>
+                            <span class="text nav-text">Customers</span>
                         </a>
                     </li>
                 </ul>
@@ -76,10 +76,6 @@
                             <i class='bx bx-log-out icon'></i>
                             <span class="text nav-text">Keluar</span>
                         </a>
-        
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
                     </li>
                 </ul>
             </div>
@@ -100,7 +96,7 @@
         <div class="offcanvas-body">
             <div class="offcanvas-sidebar">
                 <h5 class="mb-2 text-dark fw-semibold">Utama</h5>
-                <a href="dashboard.html" class="link-menu btn {{ $active === 'dashboard' ? 'active' : '' }}">
+                <a href="{{ route('admin.index') }}" class="link-menu btn {{ $active === 'dashboard' ? 'active' : '' }}">
                     <i class="bx bxs-dashboard"></i> Dashboard
                 </a>
                 <a href="dashboard-cars.html" class="link-menu btn {{ $active === 'car list' ? 'active' : '' }}">
@@ -114,8 +110,8 @@
                 <a href="dashboard-history.html" class="link-menu btn {{ $active === 'history' ? 'active' : '' }}">
                     <i class="bx bx-history"></i> History
                 </a>
-                <a href="dashboard-customers.html" class="link-menu btn {{ $active === 'customer' ? 'active' : '' }}">
-                    <i class='bx bxs-group'></i> Customer
+                <a href="{{ route('admin.customer') }}" class="link-menu btn {{ $active === 'customer' ? 'active' : '' }}">
+                    <i class='bx bxs-group'></i> Customers
                 </a>
 
                 <h5 class="mt-4 mb-2 text-dark fw-semibold">Other</h5>
@@ -126,13 +122,14 @@
                 onclick="event.preventDefault(); logout();">
                     <i class='bx bx-log-out'></i> Keluar
                 </a>
-
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
             </div>
         </div>
     </div>
+    
+
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+        @csrf
+    </form>
 
 @push('scripts')
     <script>
