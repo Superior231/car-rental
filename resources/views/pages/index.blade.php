@@ -17,7 +17,7 @@
     </section>
 
     <section class="py-5 bg-white">
-        <div class="container px-3 px-lg-5">
+        <div class="container px-4 px-lg-5">
             <h3 class="title fw-semibold mb-4">Pilih tanggal booking</h3>
             <form action="#" method="post" class="select-booking d-flex align-items-end flex-column flex-md-row gap-3 w-100">
                 <div class="d-flex flex-column flex-md-row gap-3 w-100">
@@ -45,25 +45,25 @@
     <section class="py-5">
         <div class="container">
             <h3 class="fw-semibold mb-3">Katalog</h3>
-            <div class="row row-cols-2 row-cols-lg-4 g-4">
+            <div class="row row-cols-2 row-cols-lg-4 g-3">
                 @forelse ($cars as $item)
                     <div class="col">
-                        <a href="#" class="card card-product">
+                        <a href="#" class="card card-product h-100">
                             <div class="car-image px-4 w-100">
                                 <img src="{{ asset('storage/cars/' . $item->image) }}" alt="car image">
                             </div>
                             <div class="card-body p-3 p-lg-4">
-                                <h5 class="text-dark fw-semibold mb-3">{{ $item->brand }} {{ $item->model }}</h5>
+                                <h5 class="text-dark fw-semibold mb-3">{{ $item->brand . ' ' . $item->model }}</h5>
                                 <div class="row">
                                     <div class="col-12 col-lg-5">
-                                        <div class="d-flex align-items-center gap-2">
-                                            <img src="assets/images/seat.png" style="width: 16px;" alt="Seat">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="{{ url('assets/images/seat.png') }}" style="width: 13px;" alt="seat icon">
                                             <span class="fs-7">{{ $item->seats }} seats</span>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-7">
-                                        <div class="d-flex align-items-center gap-2">
-                                            <img src="assets/images/money.png" style="width: 16px;" alt="Seat">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <img src="{{ url('assets/images/money.png') }}" style="width: 13px;" alt="money icon">
                                             <span class="fs-7">Rp. {{ number_format($item->price) }}/hari</span>
                                         </div>
                                     </div>
