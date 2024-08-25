@@ -24,7 +24,12 @@ Route::prefix('/')->middleware('auth')->group(function() {
 
 // Admin
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function() {
+    // dashboard
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
+    Route::post('/banner', [AdminController::class, 'bannerStore'])->name('admin.banner.store');
+    Route::put('/banner/{id}', [AdminController::class, 'bannerUpdate'])->name('admin.banner.update');
+    Route::delete('/banner/{id}', [AdminController::class, 'bannerDelete'])->name('admin.banner.delete');
+
     Route::resource('customers', CustomerController::class);
 });
 

@@ -75,6 +75,10 @@ const previews = [
     {
         input: document.getElementById('edit-avatar-input'),
         preview: document.getElementById('edit-avatar')
+    },
+    {
+        input: document.getElementById('edit-banner'),
+        preview: document.getElementById('edit-banner-preview')
     }
 ];
 

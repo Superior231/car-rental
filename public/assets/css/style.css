@@ -340,6 +340,50 @@ header .image-text .header-text {
 /* CKEditor End */
 
 
+/* Banner */
+.container-dashboard .banner img,
+.modal-body .banner img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/4;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+}
+@media (max-width: 768px) {
+  .container-dashboard .banner img,
+  .modal-body .banner img {
+    aspect-ratio: 16/6 !important;
+  }
+}
+
+.container-dashboard .banner .actions {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  position: absolute !important;
+  top: 0;
+  z-index: 999 !important;
+  background-color: #0000009c;
+}
+.container-dashboard .banner .actions .edit-banner-btn {
+  border-right: 1px solid var(--bg-secondary);
+}
+.container-dashboard .banner .actions button,
+.container-dashboard .banner .actions form button {
+  border: none;
+  border-radius: 0px;
+  padding: 10px 20px;
+}
+
+.container-dashboard .banner .actions button.edit-banner-btn:hover {
+  background-color: var(--bs-primary);
+}
+.container-dashboard .banner .actions button.delete-banner-btn:hover {
+  background-color: var(--text-color-danger);
+  color: var(--text-color-white) !important;
+}
+/* Banner End */
 
 
 /* Button and Form Control */
