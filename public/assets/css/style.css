@@ -312,6 +312,15 @@ header .image-text .header-text {
 /* Sidebar End */
 
 
+/* Home */
+@media (max-width: 767px) {
+  form.select-booking button {
+    width: 100%;
+  }
+}
+/* Home End */
+
+
 /* Dashboard */
 .dashboard {
   position: relative;
@@ -341,7 +350,7 @@ header .image-text .header-text {
 
 
 /* Banner */
-.container-dashboard .banner img,
+.banner img,
 .modal-body .banner img {
   position: relative;
   width: 100%;
@@ -351,13 +360,13 @@ header .image-text .header-text {
   background-position: center;
 }
 @media (max-width: 768px) {
-  .container-dashboard .banner img,
+  .banner img,
   .modal-body .banner img {
     aspect-ratio: 16/6 !important;
   }
 }
 
-.container-dashboard .banner .actions {
+.banner .actions {
   display: flex;
   align-items: center;
   gap: 0px;
@@ -366,20 +375,20 @@ header .image-text .header-text {
   z-index: 999 !important;
   background-color: #0000009c;
 }
-.container-dashboard .banner .actions .edit-banner-btn {
+.banner .actions .edit-banner-btn {
   border-right: 1px solid var(--bg-secondary);
 }
-.container-dashboard .banner .actions button,
-.container-dashboard .banner .actions form button {
+.banner .actions button,
+.banner .actions form button {
   border: none;
   border-radius: 0px;
   padding: 10px 20px;
 }
 
-.container-dashboard .banner .actions button.edit-banner-btn:hover {
+.banner .actions button.edit-banner-btn:hover {
   background-color: var(--bs-primary);
 }
-.container-dashboard .banner .actions button.delete-banner-btn:hover {
+.banner .actions button.delete-banner-btn:hover {
   background-color: var(--text-color-danger);
   color: var(--text-color-white) !important;
 }
