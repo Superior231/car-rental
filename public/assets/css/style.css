@@ -322,9 +322,22 @@ header .image-text .header-text {
 }
 .container-dashboard {
   padding: 0px 30px;
+  margin-bottom: 50px;
+}
+
+.car-image {
+  width: 50px;
+  mix-blend-mode: multiply;
 }
 /* Dashboard End */
 
+
+/* CKEditor */
+.ck-editor__editable {
+  height: 200px;
+  overflow-y: auto !important;
+}
+/* CKEditor End */
 
 
 

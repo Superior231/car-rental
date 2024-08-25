@@ -37,7 +37,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="side-link {{ $active === 'car list' ? 'active' : '' }}" title="Daftar Mobil">
+                        <a href="{{ route('cars.index') }}" class="side-link {{ $active === 'car list' ? 'active' : '' }}" title="Daftar Mobil">
                             <i class="bx bxs-car icon"></i>
                             <span class="text nav-text">Daftar Mobil</span>
                         </a>
@@ -55,7 +55,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('customer.index') }}" class="side-link {{ $active === 'customer' ? 'active' : '' }}" title="Customers">
+                        <a href="{{ route('customers.index') }}" class="side-link {{ $active === 'customer' ? 'active' : '' }}" title="Customers">
                             <i class='bx bxs-group icon'></i>
                             <span class="text nav-text">Customers</span>
                         </a>
@@ -99,7 +99,7 @@
                 <a href="{{ route('admin.index') }}" class="link-menu btn {{ $active === 'dashboard' ? 'active' : '' }}">
                     <i class="bx bxs-dashboard"></i> Dashboard
                 </a>
-                <a href="dashboard-cars.html" class="link-menu btn {{ $active === 'car list' ? 'active' : '' }}">
+                <a href="{{ route('cars.index') }}" class="link-menu btn {{ $active === 'car list' ? 'active' : '' }}">
                     <i class="bx bxs-car"></i> Daftar Mobil
                 </a>
 
@@ -110,7 +110,7 @@
                 <a href="dashboard-history.html" class="link-menu btn {{ $active === 'history' ? 'active' : '' }}">
                     <i class="bx bx-history"></i> History
                 </a>
-                <a href="{{ route('customer.index') }}" class="link-menu btn {{ $active === 'customer' ? 'active' : '' }}">
+                <a href="{{ route('customers.index') }}" class="link-menu btn {{ $active === 'customer' ? 'active' : '' }}">
                     <i class='bx bxs-group'></i> Customers
                 </a>
 

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\CarController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GoogleLoginController;
@@ -16,6 +17,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::prefix('/')->middleware('auth')->group(function() {
     Route::resource('dashboard', DashboardController::class);
+    Route::resource('cars', CarController::class);
 });
 
 
@@ -23,7 +25,7 @@ Route::prefix('/')->middleware('auth')->group(function() {
 // Admin
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function() {
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
-    Route::resource('customer', CustomerController::class);
+    Route::resource('customers', CustomerController::class);
 });
 
 

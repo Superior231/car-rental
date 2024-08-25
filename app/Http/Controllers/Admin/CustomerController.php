@@ -51,9 +51,9 @@ class CustomerController extends Controller
         $customer = User::create($data);
 
         if ($customer) {
-            return redirect()->route('customer.index')->with('success', 'User berhasil dibuat!');
+            return redirect()->route('customers.index')->with('success', 'User berhasil dibuat!');
         } else {
-            return redirect()->route('customer.index')->with('error', 'User gagal dibuat!');
+            return redirect()->route('customers.index')->with('error', 'User gagal dibuat!');
         }
     }
 
@@ -102,9 +102,9 @@ class CustomerController extends Controller
         $customer->save();
 
         if ($customer) {
-            return redirect()->route('customer.index')->with('success', 'User berhasil diedit!');
+            return redirect()->route('customers.index')->with('success', 'User berhasil diedit!');
         } else {
-            return redirect()->route('customer.index')->with('error', 'User gagal diedit!');
+            return redirect()->route('customers.index')->with('error', 'User gagal diedit!');
         }
     }
 
@@ -119,9 +119,9 @@ class CustomerController extends Controller
         $customer->delete();
 
         if ($customer) {
-            return redirect()->route('customer.index')->with('success', 'User berhasil dihapus!');
+            return redirect()->route('customers.index')->with('success', 'User berhasil dihapus!');
         } else {
-            return redirect()->route('customer.index')->with('error', 'User gagal dihapus!');
+            return redirect()->route('customers.index')->with('error', 'User gagal dihapus!');
         }
     }
 }

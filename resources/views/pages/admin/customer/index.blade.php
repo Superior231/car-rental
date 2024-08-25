@@ -22,10 +22,11 @@
                         <table class="table table-striped table-hover" id="customerTable" style="width: 100%;">
                             <thead>
                                 <tr>
-                                    <th class="px-auto px-lg-2 text-center">No</th>
+                                    <th class="text-center">No</th>
                                     <th>Nama Lengkap</th>
                                     <th>Email</th>
                                     <th>Phone</th>
+                                    <th>Alamat</th>
                                     <th class="text-center">Actions</th>
                                 </tr>
                             </thead>
@@ -64,12 +65,19 @@
                                             </div>
                                         </td>
                                         <td>
+                                            <div class="address-info">
+                                                <span class="fw-normal">
+                                                    {{ $item->address ? $item->address : "None" }}
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>
                                             <div class="actions d-flex justify-content-center align-items-center gap-2 w-100">
                                                 <a href="#" onclick="editUser('{{ $item->id }}', '{{ $item->avatar }}', '{{ $item->avatar_google }}', '{{ $item->name }}', '{{ $item->email }}', '{{ $item->phone }}', '{{ $item->address }}')" data-bs-toggle="modal" data-bs-target="#edit-user-modal" title="Edit">
                                                     <i class='bx bxs-pencil bg-primary'></i>
                                                 </a>
 
-                                                <form id="delete-user-form-{{ $item->id }}" action="{{ route('customer.destroy', $item->id) }}" method="post" class="d-inline">
+                                                <form id="delete-user-form-{{ $item->id }}" action="{{ route('customers.destroy', $item->id) }}" method="post" class="d-inline">
                                                     @csrf
                                                     @method('DELETE')
         
@@ -98,7 +106,7 @@
                         <h4 class="modal-title" id="tambah-user-label">Tambah user</h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <form action="{{ route('customer.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('customers.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
 
                         <div class="modal-body">
@@ -123,7 +131,7 @@
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <div class="phone">
                                     <label for="phone">Phone number</label>
-                                    <input type="number" class="form-control  @error('phone') is-invalid @enderror" name="phone" id="phone" placeholder="Ex. 08960xxxxxxx" autocomplete="off" value="{{ old('phone') }}">
+                                    <input type="number" class="form-control  @error('phone') is-invalid @enderror" name="phone" id="phone" placeholder="Ex. 628960xxxxxxx" autocomplete="off" value="{{ old('phone') }}">
                                 </div>
                                 <div class="address">
                                     <label for="address">Address</label>
@@ -191,7 +199,7 @@
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <div class="edit-phone">
                                     <label for="edit-phone">Phone number</label>
-                                    <input type="number" class="form-control @error('phone') is-invalid @enderror" name="phone" id="edit-phone" placeholder="Ex. 08960xxxxxxx" autocomplete="off">
+                                    <input type="number" class="form-control @error('phone') is-invalid @enderror" name="phone" id="edit-phone" placeholder="Ex. 628960xxxxxxx" autocomplete="off">
                                 </div>
                                 <div class="edit-address">
                                     <label for="edit-address">Address</label>
@@ -239,7 +247,7 @@
         });
         $('#customerTable').DataTable({
             "language": {
-                "searchPlaceholder": "Search customer..."
+                "searchPlaceholder": "Search customers..."
             }
         });
 
@@ -254,7 +262,7 @@
             $('#edit-phone').val(phone);
             $('#edit-address').val(address);
 
-            $('#edit-user-form').attr('action', "{{ route('customer.update', '') }}" + '/' + id);
+            $('#edit-user-form').attr('action', "{{ route('customers.update', '') }}" + '/' + id);
             $('#edit-user-modal').modal('show');
         }
 

@@ -12,13 +12,13 @@
                 <h2 class="text-dark fw-semibold">Selamat Datang Kembali, {{ Auth::user()->name }} 👋</h2>
             </div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-2 g-md-3" id="row-dashboard">
-                <a href="#" class="col">
+                <a href="{{ route('cars.index') }}" class="col">
                     <div class="card h-100">
                         <div class="card-body d-flex align-items-center justify-content-between p-4">
                             <div class="d-flex gap-2">
                                 <i class="bx bxs-car fs-1 text-primary"></i>
                                 <div class="card-info d-flex flex-column">
-                                    <h4 class="text-dark">20 Mobil</h4>
+                                    <h4 class="text-dark">{{ $carCount }} Mobil</h4>
                                     <p class="text-secondary fs-7">Jumlah Mobil</p>
                                 </div>
                             </div>
@@ -26,7 +26,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="{{ route('customer.index') }}" class="col">
+                <a href="{{ route('customers.index') }}" class="col">
                     <div class="card h-100">
                         <div class="card-body d-flex align-items-center justify-content-between p-4">
                             <div class="d-flex gap-2">
@@ -184,7 +184,7 @@
         });
         $('#bookingOngoingTable').DataTable({
             "language": {
-                "searchPlaceholder": "Search booking..."
+                "searchPlaceholder": "Search here..."
             }
         });
     </script>
