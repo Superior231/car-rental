@@ -100,9 +100,9 @@
                                         <td>
                                             <div class="status-info d-flex justify-content-center align-items-center" style="width: 100%;">
                                                 @if ($item->status === 'Available')
-                                                    <i class='bx bxs-check-circle text-success fs-2'></i>
+                                                    <i class='bx bxs-check-circle text-success fs-2' title="Available"></i>
                                                 @else
-                                                    <i class='bx bxs-time text-secondary fs-2'></i>
+                                                    <i class='bx bxs-time text-secondary fs-2' title="On Going"></i>
                                                 @endif
                                             </div>
                                         </td>

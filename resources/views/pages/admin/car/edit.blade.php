@@ -83,15 +83,6 @@
                         </div>
 
                         <div class="d-flex flex-column flex-lg-row gap-3 mb-3">
-                            <div class="color w-100">
-                                <label for="color">Warna<strong class="text-danger">*</strong></label>
-                                <input type="text" name="color" class="form-control @error('color') is-invalid @enderror" id="color" placeholder="Masukkan warna mobil" value="{{ $car->color }}" required>
-                                @error('color')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
                             <div class="seats w-100">
                                 <label for="seats">Kapasitas Penumpang<strong class="text-danger">*</strong></label>
                                 <input type="number" name="seats" class="form-control @error('seats') is-invalid @enderror" id="seats" placeholder="Masukkan kapasitas penumpang" value="{{ $car->seats }}" required>
@@ -109,6 +100,25 @@
                                         {{ $message }}
                                     </div>
                                 @enderror
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-column flex-lg-row gap-3 mb-3">
+                            <div class="color w-100">
+                                <label for="color">Warna<strong class="text-danger">*</strong></label>
+                                <input type="text" name="color" class="form-control @error('color') is-invalid @enderror" id="color" placeholder="Masukkan warna mobil" value="{{ $car->color }}" required>
+                                @error('color')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+                            <div class="status w-100">
+                                <label for="status">Kategori</label>
+                                <select id="status" name="status" class="form-select" required>
+                                    <option value="Available" {{ $car->status == 'Available' ? 'selected' : '' }}>Available</option>
+                                    <option value="On Going" {{ $car->status == 'On Going' ? 'selected' : '' }}>On Going</option>
+                                </select>
                             </div>
                         </div>
 
